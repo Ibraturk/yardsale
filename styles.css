@@ -320,7 +320,7 @@ body {
     gap: 16px;
     align-items: center;
     background-color: var(--text-input-field);
-    margin-bottom: 24px;
+    margin: 24px;
     border-radius: 8px;
     padding: 0 24px;
 }
@@ -350,6 +350,8 @@ body {
 .order, .order-desktop p:nth-child(2){
   text-align: end;
   font-weight: bold;
+  margin: 0 0 24px;
+
 } 
 nav {
     display: flex;
@@ -458,7 +460,7 @@ nav {
     .form {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
     .cards-container {
         --card-size: 140px;
