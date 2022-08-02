@@ -245,6 +245,10 @@ body {
     margin-bottom: 20px;
 }
 .mobile-menu {
+    position: absolute;
+    top: 61px;
+    left: 0px;
+    background-color: var(--white);
     padding: 24px;
 
 }
@@ -261,11 +265,6 @@ body {
     padding: 0;
     margin: 24px 0 0;
     list-style: none;
-
-}
-.mobile-menu ul:last-child {
-   position: absolute;
-   bottom: 0;
 
 }
 .mobile-menu ul li{
@@ -493,5 +492,15 @@ nav {
     }
     .product-detail{
         width: 100%;
+    }
+    .desktop-menu{
+        display: none;
+    }
+
+}
+
+@media (min-width: 641px) {
+    .mobile-menu {
+        display: none;
     }
 }
