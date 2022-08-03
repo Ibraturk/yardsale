@@ -165,6 +165,7 @@ body {
     grid-template-columns: repeat(auto-fill, var(--card-size));
     gap: 26px;
     place-content: center;
+    margin-top: 20px;
 }
 .product-card {
     width: var(--card-size);
@@ -188,19 +189,19 @@ body {
     width: 35px;
     height: 35px;
 }
-.product-info div p:nth-child(1) {
+.product-info div :nth-child(1) {
     font-weight: bold;
     font-size: var(--md);
     margin-top: 16px;
     margin-bottom: 4px;
 }
-.product-info div p:nth-child(2) {
+.product-info div :nth-child(2) {
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 36px;
     color: var(--very-light-pink);
 }
-.product-info div p:nth-child(3) {
+.product-info div :nth-child(3) {
     font-size: var(--sm);
     margin-top:  0;
     margin-bottom: 36px;
