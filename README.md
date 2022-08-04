@@ -6,8 +6,11 @@ La continuación del curso de JavaScript presenta nuevos retos.
 1. Enlazar componentes en un index.html
 2. Crear acciones y darle dinamismo a la página
 
-##Fusión del menú en desktop
+## Fusión del menú en desktop
 - Agregar Navbar
 - Integrar menu mobile y desktop
+- Integrar componentes 
 - Adaptar Css de ser necesario
 - Crear interacción con JavaScript
+- Manioulación del Html desde JS
+
