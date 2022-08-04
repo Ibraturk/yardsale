@@ -1,22 +1,25 @@
 // Toggle Menus Desktop & Mobile
 
 let menuEmail = document.querySelector('.navbar-email');
-let desktopMenu = document.querySelector('.desktop-menu')
+let desktopMenu = document.querySelector('.desktop-menu');
 
-let menuBurguer = document.querySelector('.menu')
-let mobileMenu = document.querySelector('.mobile-menu')
+let menuBurguer = document.querySelector('.menu');
+let mobileMenu = document.querySelector('.mobile-menu');
 
 //  Shopping Cart
 
-let menuCart = document.querySelector('.navbar-shopping-cart')
-let aside = document.querySelector('.product-detail')
+let menuCart = document.querySelector('.navbar-shopping-cart');
+let aside = document.querySelector('.product-detail');
+let asideProduct = document.querySelector('.shopping-cart-detail');
+let closeAsideProduct = document.querySelector('.product-detail-close')
 
 // Cards Container
-let cardsContainer = document.querySelector('.cards-container')
+let cardsContainer = document.querySelector('.cards-container');
 // Listeners 
 menuEmail.addEventListener('click', toggleMenus);
 menuBurguer.addEventListener('click', toggleMenus);
-menuCart.addEventListener('click', toggleCartMenu)
+menuCart.addEventListener('click', toggleCartMenu);
+closeAsideProduct.addEventListener('click', closeProductDetail);
 
 //Functions 
 
@@ -24,15 +27,29 @@ function toggleMenus() {
     desktopMenu.classList.toggle('inactive');
     mobileMenu.classList.toggle('inactive');
     aside.classList.add('inactive');
+    asideProduct.classList.add('inactive');
+
 
 }
 
 function toggleCartMenu() {
     desktopMenu.classList.add('inactive');
     mobileMenu.classList.add('inactive');
+    asideProduct.classList.add('inactive');
     aside.classList.toggle('inactive');
+
 }
 
+function openProductDetail() {
+    aside.classList.add('inactive');
+    asideProduct.classList.remove('inactive');
+    
+}
+function closeProductDetail() {
+    aside.classList.add('inactive');
+    asideProduct.classList.add('inactive');
+    
+}
 
 let productList = [];
 productList.push({
@@ -83,6 +100,7 @@ function renderProducts(arr) {
     
       let productImg = document.createElement('img');
       productImg.setAttribute('src', product.image);
+      productImg.addEventListener('click', openProductDetail)
     
       let productInfo= document.createElement('div');
       productInfo.classList.add('product-info');
@@ -112,3 +130,4 @@ function renderProducts(arr) {
 }
 
 renderProducts(productList);
+
